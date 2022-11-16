@@ -35,7 +35,7 @@ namespace JWTWebAPILearning.Controllers
             }
             if(!VerifyPasswordHash(request.Password, users.PasswordHash, users.PasswordSalt))
             {
-                return BadRequest("Wrong Password");
+                return BadRequest("Wrong Password!");
             }
             string token = CreateToken(users);
 
